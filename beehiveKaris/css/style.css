@@ -1,0 +1,411 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.HeaderComponent{
+    width: 100%;
+    height: 70px;
+    background-color: #1a2829;
+}
+
+
+.appComponent{
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.LoadinComponent{
+    background-color: grey;
+    width: 100%;
+    height: 100vh;
+    float: left;
+}
+
+.loadinTitle{
+    color: white;
+}
+
+.section1, .section2 {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.PostComponent{
+    background-color: chocolate;
+}
+
+.ToDosComponent{
+    background-color: orange;
+}
+
+.AlbumComponent{
+    background-color: goldenrod;
+}
+
+
+
+/* --------------------------------------Bees-------------------------------------- */
+
+.BeesComponent{
+    z-index: 1;
+    width: 50%;
+    height: 92vh;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.BeesComponent::-webkit-scrollbar{
+    display: none;
+}
+
+.beeComponent {
+    background-color: #dfedff;
+    height: auto;
+    margin: 6px 5px;
+    padding: 10px 5px 5px 10px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+  }
+
+.beeComponent a:link, .beeComponent a:visited {
+    color: black; 
+}
+
+.beeRightCol{
+    width: 100%;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+}
+
+.beeImage {
+    width: 128px;
+    height: auto;
+    border-width: var(--border-width);
+}
+
+.beeName{
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.beeUsername{
+    font-size: 14px;
+}
+  
+.beeEmail{
+    font-size: 14px;
+}
+  
+.beePhone{
+    font-size: 14px;
+}
+  
+.beeWebsite{
+    font-size: 14px;
+}
+
+.indicatorsContainer {
+    width: 100%;
+    /*background-color: #0088cc;*/
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin: 10px 0 5px 0;
+}
+  
+.indicatorsContainer > div {
+    margin: 5px;
+}
+
+.indicator {
+    color: white;
+    font-size: 13px;
+    flex-grow: 1;
+    background-color:#62717b;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.beeSelected {
+    /*border-color: var(--secondary-color);*/
+    background-color: var(--secondary-color);
+    color: white;
+    background-color: lightslategrey;
+}
+  
+  .beeSelected a:link, .beeSelected a:visited {
+    color: white;
+    background-color: lightslategrey;
+}
+
+/* --------------------------------------Posts-------------------------------------- */
+
+.postsComponent {
+    background-color: white;
+    z-index: 2;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.postsComponent::-webkit-scrollbar{
+    display: none;
+}
+
+.postComponent {
+    background-color: lightsteelblue;
+    min-height: 100px;
+    margin: 5px 5px 10px 0px;
+    padding: 10px 10px 10px 10px;
+    /*border-color: var(--secondary-color);*/
+    /*border-style: solid;*/
+    /*border-width: var(--border-width);*/
+    /*border-radius: 5px;*/
+}
+  
+.postTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.postBody {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.commentComponent {
+    /*border-color: darkgray;*/
+    /*border-style: solid;*/
+    /*border-width: var(--border-width);*/
+    /*border-radius: 5px;*/
+    background-color: #cfd8dc;
+    min-height: 30px;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+  }
+  
+.commentName {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.commentBody {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+  
+.commentEmail {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: right;
+    color: black;
+}
+  
+button {
+    color: white;
+    font-weight: bolder;
+    border: none;
+    outline: inherit;
+    cursor: pointer;
+}
+  
+input {
+    padding: 10px;
+    border:2px solid #cfd8dc;
+}
+  
+input:focus {
+    outline: none !important;
+    border:2px solid var(--secondary-color);
+}
+  
+input::placeholder {
+    margin-left: 10px;
+    color: #cfd8dc;
+}
+  
+textarea {
+    padding: 10px;
+    border:2px solid #cfd8dc;
+}
+  
+textarea::placeholder {
+    margin-left: 10px;
+    color: #cfd8dc;
+}
+  
+textarea:focus {
+    outline: none !important;
+    border:2px solid var(--secondary-color);
+}
+  
+.addCommentButton {
+    width: 100%;
+    height: 40px;
+    background-color: lightslategrey;
+    color: white;
+}
+
+
+
+
+.albumComponent {
+    width: 40%;
+    height: 100vh;
+    float: left;
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-x: hidden;
+}
+
+.albumComponent::-webkit-scrollbar{
+    display: none;
+}
+
+.backBtn {
+    font-weight: bolder;
+    height: var(--navBarHeight);
+    background-color: white;
+    color: white;
+    width: 60px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .thumbnailComponent {
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+  }
+  
+  .thumbnail {
+    width: 90%;
+    height: auto;
+    margin: 0px 10px 0px 10px;
+  }
+  
+  .photo {
+    background-color: white;
+    width: 50%;
+    height: auto;
+  }
+  
+.photoComponent {
+    position: absolute;
+    z-index: 100;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .photoComponent-okBtn {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: palevioletred;
+  }
+
+
+
+
+
+  
+.todosComponent {
+    width: 60%;
+    height: 100vh;
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.todosComponent::-webkit-scrollbar{
+    display: none;
+}
+
+
+.todoComponent {
+    background-color: lightsteelblue;
+    min-height: 70px;
+    margin: 5px 5px 7px 0px;
+}
+
+.todoTitle {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.todoCompleted {
+    background-color: #3b4849;
+    color: lightgray;
+}
+
+
+
+
+/*querys*/
+
+    @media (min-width: 100px) and (max-width: 700px) {
+        .BeesComponent {
+        position: absolute;
+        width: 100%;
+        }
+    
+        .postsComponent {
+        width: 100%;
+        position: absolute;
+        }
+    
+        .albumComponent {
+        width: 100%;
+        display: none;
+        }
+    
+        .todosComponent {
+        width: 100%;
+        display: none;
+        }
+    }
+  
+    @media (min-width: 701px) and (max-width: 1200px) {
+        .BeesComponent {
+        width: 90%;
+        }
+    
+        .postsComponent {
+        width: 50%;
+        }
+    
+        .albumComponent {
+        width: 50%;
+        display: none;
+        }
+    
+        .todosComponent {
+        width: 50%;
+        display: none;
+        }
+    }

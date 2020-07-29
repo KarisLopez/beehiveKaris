@@ -1,0 +1,68 @@
+.commentFormComponent {
+    position: absolute;
+    z-index: 100;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBackground {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.okBtn {
+    width: 40%;
+    height: 40px;
+    margin-left: 5px;
+    background-color: palevioletred;
+}
+
+.cancelBtn{
+    color: black;
+    width: 40%;
+    height: 40px;
+    margin-right: 5px;
+    background-color: var(--selected-background-color);
+}
+
+.comment-title {
+    width: 80%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.comment-body {
+    width: 80%;
+    height: 70px;
+}
+
+.comment-label {
+    font-size: 18px;
+    align-self: end;
+    padding-left: 10%;
+    margin-bottom: 5px;
+}
+
+.comment-header {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
