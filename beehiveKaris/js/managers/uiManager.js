@@ -72,6 +72,10 @@ class UIManager {
         this.appComponent.postFormComponent.hide();
     }
 
+    hideTodoForm(){
+        this.appComponent.todoFormComponent.hide();
+    }
+
 
     addNewComment(title, body) {
         var comment = new Comment(body, AppManager.getInstance().owner.email, this.postReceivingComment.id, title, this.postReceivingComment.comments.length);
@@ -88,19 +92,35 @@ class UIManager {
     }
 
     addNewPost(title, body) {
-        //body, id, title, userId
-        var post = new Post(body, 0, title, 0);
-        console.log(body, 0, title, 0);
+        var userId = AppManager.getInstance().owner.id;
+        var id = this.beeComponentSelected.model.posts.length+1;
+        var post = new Post(body, id, title, userId);
+        console.log(body, id, title, userId);
         this.beeComponentSelected.addPost(post);
         this.refreshPostsComponent(this.beeComponentSelected, false);
         this.appComponent.postFormComponent.hide();
     }
 
-    showPostForm(bee) {
-        this.beeComponentSelected = bee;
-        console.log("postFormComponent");
-        console.log(this.beeComponentSelected);
+    showPostForm() {
+        //this.beeComponentSelected = bee;
+        //console.log("postFormComponent");
+        //console.log(this.beeComponentSelected);
         this.appComponent.postFormComponent.show();
+    }
+
+    addNewTodo(title){
+        var completed = false;
+        var id = this.beeComponentSelected.model.todos.length+1;
+        var userId = AppManager.getInstance().owner.id;
+        var todo = new ToDo(completed, id, title, userId);
+        console.log(completed, id, userId, title);
+        this.beeComponentSelected.addToDos(todo);
+        this.refreshPostsComponent(this.beeComponentSelected, false);
+        this.appComponent.todoFormComponent.hide();
+    }
+
+    showTodoForm(){
+        this.appComponent.todoFormComponent.show();
     }
 
     showImage(photo) {

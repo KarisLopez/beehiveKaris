@@ -44,6 +44,6 @@ class PostsComponent extends Component {
   }
 
   onAddPostClick(e){
-    AppManager.getInstance().uiManager.showPostForm(this.bee);
+    AppManager.getInstance().uiManager.showPostForm();
   }
 }

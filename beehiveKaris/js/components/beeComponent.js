@@ -125,5 +125,11 @@ class BeeComponent extends Component {
         console.log('onTodosIndicator');
     }
 
-    
+    addPost(post){
+        this.model.addPost(post);
+    }
+
+    addToDos(todo){
+        this.model.addToDos(todo);
+    }
 }

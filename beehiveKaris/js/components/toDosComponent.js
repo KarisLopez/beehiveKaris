@@ -31,12 +31,16 @@ class ToDosComponent extends Component {
 
         var addToDoBtn = document.createElement('button');
         addToDoBtn.innerHTML = 'Add';
-        //addToDoBtn.onclick = this.onAddToDoClick.bind(this);
+        addToDoBtn.onclick = this.onAddToDoClick.bind(this);
         addToDoBtn.classList.add("addToDoBtn");
         this.rightcol.appendChild(addToDoBtn);
   
         bee.todos.forEach((todo) => {
             var todoComponent = new ToDoComponent(this.container, todo);
         })
+    }
+
+    onAddToDoClick(E){
+        AppManager.getInstance().uiManager.showTodoForm();
     }
 }
