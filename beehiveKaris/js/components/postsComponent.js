@@ -1,6 +1,7 @@
 class PostsComponent extends Component {
-  constructor(parent) {
+  constructor(parent, model) {
     super(parent);
+    this.model = model;
     this.container.id = "postsComponent";
     this.container.classList.add("postsComponent");
     this.bee = null;
@@ -32,12 +33,17 @@ class PostsComponent extends Component {
  
       var addPostBtn = document.createElement('button');
       addPostBtn.innerHTML = 'Add';
-      //addPostBtn.onclick = this.onAddPostClick.bind(this);
+      addPostBtn.onclick = this.onAddPostClick.bind(this);
       addPostBtn.classList.add("addPostBtn");
       this.rightcol.appendChild(addPostBtn);
 
       bee.posts.forEach((post) => {
           var postComponent = new PostComponent(this.container, post);
       })
+      
+  }
+
+  onAddPostClick(e){
+    AppManager.getInstance().uiManager.showPostForm(this.bee);
   }
 }

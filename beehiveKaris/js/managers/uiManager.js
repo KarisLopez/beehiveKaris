@@ -2,6 +2,7 @@ class UIManager {
     constructor(appManager) {
         this.appManager = appManager;
         this.postReceivingComment = null;
+        this.receivingPost = null;
         this.beeComponentSelected = null;
         this.loadingComponent = new LoadinComponent(document.body);
         this.headerComponent = new HeaderComponent(document.body);
@@ -67,11 +68,15 @@ class UIManager {
         this.appComponent.commentFormComponent.hide();
     }
 
+    hidePostForm() {
+        this.appComponent.postFormComponent.hide();
+    }
+
+
     addNewComment(title, body) {
-        //body, email, id, name, postId
-        //var comment = new Comment(this.postReceivingComment.comments.length, this.postReceivingComment.id, title, body, AppManager.getInstance().owner.email);
         var comment = new Comment(body, AppManager.getInstance().owner.email, this.postReceivingComment.id, title, this.postReceivingComment.comments.length);
         this.postReceivingComment.addComment(comment);
+        console.log(this.postReceivingComment);
         this.refreshPostsComponent(this.beeComponentSelected, false);
         this.appComponent.commentFormComponent.hide();
     }
@@ -80,6 +85,22 @@ class UIManager {
         this.postReceivingComment = post;
         console.log("commentFormComponent");
         this.appComponent.commentFormComponent.show();// .appComponent.commentFormComponent.show();
+    }
+
+    addNewPost(title, body) {
+        //body, id, title, userId
+        var post = new Post(body, 0, title, 0);
+        console.log(body, 0, title, 0);
+        this.beeComponentSelected.addPost(post);
+        this.refreshPostsComponent(this.beeComponentSelected, false);
+        this.appComponent.postFormComponent.hide();
+    }
+
+    showPostForm(bee) {
+        this.beeComponentSelected = bee;
+        console.log("postFormComponent");
+        console.log(this.beeComponentSelected);
+        this.appComponent.postFormComponent.show();
     }
 
     showImage(photo) {

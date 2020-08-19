@@ -191,15 +191,16 @@ class DataManager { // se encarga de desscargar solo los datos
         var request = e.target;
         if (request.status === 200) {
             var data = JSON.parse(request.responseText);
-            for (let i = 0; i < data.length; i++) {
-                this.Data = data[i];
+
+            for (const [key, value] of Object.entries(data)) {
+                this.Data = value;
                 var todo = new ToDo(
                     this.Data.completed, 
                     this.Data.id, 
                     this.Data.title, 
                     this.Data.userId
                 );
-                this.addToDosToBee(todo); 
+                this.addToDosToBee(todo);
             }
             console.log(this.bees);
             this.appManager.uiManager.showUI();

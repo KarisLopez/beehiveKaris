@@ -64,7 +64,6 @@ class BeeComponent extends Component {
 
         /*switch (AppManager.getInstance().uiManager.uiState) {
             case AppManager.getInstance().uiManager.MOBILE:
-                console.log('changeToMobile caca');
                 this.changeToMobile();
                 break;
             case AppManager.getInstance().uiManager.TABLET:
@@ -87,7 +86,6 @@ class BeeComponent extends Component {
         //AppManager.getInstance().uiManager.refreshPostsComponent(this, true);
         var appManager = AppManager.getInstance();
         appManager.uiManager.refreshPostsComponent(this.model);
-        console.log("caca");
     }
 
     changeToMobile() {
@@ -126,4 +124,6 @@ class BeeComponent extends Component {
     onTodosIndicator() {
         console.log('onTodosIndicator');
     }
+
+    
 }

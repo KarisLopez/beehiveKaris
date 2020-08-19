@@ -11,6 +11,7 @@ class AppComponent extends Component {
         this.container.appendChild(this.section2);
         
         this.commentFormComponent = new CommentFormComponent(this.container);
+        this.postFormComponent = new PostFormComponent(this.container);
         this.photoComponent = new PhotoComponent(this.container);
 
         this.beesComponent = new BeesComponent(this.section1);
